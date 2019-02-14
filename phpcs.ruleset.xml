@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<ruleset name="Laravel Standard">
+    <description>A custom coding standard for Laravel projects</description>
+
+    <file>app</file>
+    <file>bootstrap</file>
+    <file>config</file>
+    <file>database</file>
+    <file>resources</file>
+    <file>routes</file>
+    <file>tests</file>
+    <file>webpack.mix.js</file>
+
+    <exclude-pattern>*.min.js</exclude-pattern>
+    <exclude-pattern>*.min.css</exclude-pattern>
+    <exclude-pattern>bootstrap/cache/*</exclude-pattern>
+    <exclude-pattern>resources/assets/*</exclude-pattern>
+
+    <rule ref="PSR2"/>
+    <rule ref="Generic.PHP.Syntax"/>
+    <rule ref="Generic.Debug.CSSLint"/>
+    <rule ref="Generic.Debug.JSHint"/>
+
+    <rule ref="PSR1.Files.SideEffects.FoundWithSymbols">
+        <exclude-pattern>bootstrap/autoload.php</exclude-pattern>
+    </rule>
+
+    <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
+        <exclude-pattern>database/*</exclude-pattern>
+    </rule>
+
+    <rule ref="Internal.NoCodeFound">
+        <exclude-pattern>resources/views/*</exclude-pattern>
+    </rule>
+
+    <!-- Relax Generic LineLength sniff for auto-generated phpdocs -->
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="140"/>
+            <property name="absoluteLineLimit" value="160"/>
+        </properties>
+    </rule>
+</ruleset>

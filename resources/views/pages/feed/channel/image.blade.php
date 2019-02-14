@@ -1,0 +1,1 @@
+<img class="mr-3 mw-100" src="{{ $image->getUrl() }}" alt="{{ $channel->getTitle() }}" />
