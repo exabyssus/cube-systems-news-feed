@@ -8,10 +8,6 @@ use Illuminate\Support\Collection;
 
 interface ChannelInterface
 {
-    public function getGenerator():? string;
-
-    public function getDocs():? string;
-
     public function getTitle():? string;
 
     public function getLanguage():? string;
