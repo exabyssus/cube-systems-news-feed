@@ -20,7 +20,7 @@ class FeedService
      * @param string $serviceName
      * @return AbstractConfig
      */
-    protected function getServiceConfig(string $serviceName): AbstractConfig
+    public function getServiceConfig(string $serviceName): AbstractConfig
     {
         $config = config(sprintf('feeds.%s', $serviceName), []);
         return new Config($config);
